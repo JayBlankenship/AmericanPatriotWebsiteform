@@ -3,13 +3,28 @@
     <!-- Learn More: https://formbold.com -->
     <div class="formbold-form-wrapper">
       
-      <img src="your-image-url-here.jpg">
-  
-      <form action="https://formbold.com/s/FORM_ID" method="POST">
+      <img src="https://images.pexels.com/photos/418831/pexels-photo-418831.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script>
+        function sendEmail(){
+          Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "Jay313960@gmail.com",
+            Password : "048683841BB85E26AB22EB4EECA54F520E53",
+            To : "Jay313960@gmail.com",
+            From : document.getElementById('email').value,
+            Subject : document.getElementById('email').value,
+            Body : document.getElementById('email').value
+          }).then(
+            message => alert(message)
+          );
+        }
+      </script>
+      <form onsubmit="sendEmail(); reset(); return false;" action="connect.php" method="post">
         <div class="formbold-form-title">
           <h2 class="">Register now</h2>
           <p>
-            Thankyou for taking the time to join Jay Blankenship Enterprise  
+            Thankyou for taking the time to join Jay Blankenship's Enterprise  
           </p>
         </div>
   
@@ -23,6 +38,8 @@
               name="firstname"
               id="firstname"
               class="formbold-form-input"
+              placeholder="First name"
+              required
             />
           </div>
           <div>
@@ -32,6 +49,8 @@
               name="lastname"
               id="lastname"
               class="formbold-form-input"
+              placeholder="Last name"
+              required
             />
           </div>
         </div>
@@ -44,6 +63,7 @@
               name="email"
               id="email"
               class="formbold-form-input"
+              placeholder="xxxxxx@xxxxx.com"
             />
           </div>
           <div>
@@ -53,6 +73,7 @@
               name="phone"
               id="phone"
               class="formbold-form-input"
+              placeholder="Phone number"
             />
           </div>
         </div>
@@ -66,6 +87,7 @@
             name="address"
             id="address"
             class="formbold-form-input"
+            placeholder="Street Address"
           />
         </div>
   
@@ -78,6 +100,7 @@
             name="address2"
             id="address2"
             class="formbold-form-input"
+            placeholder="Street Address Line 2"
           />
         </div>
   
@@ -89,6 +112,7 @@
               name="state"
               id="state"
               class="formbold-form-input"
+              placeholder="State/Prvince"
             />
           </div>
           <div>
@@ -98,6 +122,7 @@
               name="country"
               id="country"
               class="formbold-form-input"
+              placeholder="Country"
             />
           </div>
         </div>
@@ -110,16 +135,11 @@
               name="post"
               id="post"
               class="formbold-form-input"
+              placeholder="Post/Zip code"
             />
           </div>
           <div>
-            <label for="area" class="formbold-form-label"> Area Code </label>
-            <input
-              type="text"
-              name="area"
-              id="area"
-              class="formbold-form-input"
-            />
+           
           </div>
         </div>
   
@@ -130,6 +150,7 @@
                 type="checkbox"
                 id="supportCheckbox"
                 class="formbold-input-checkbox"
+                required
               />
               <div class="formbold-checkbox-inner">
                 <span class="formbold-opacity-0">
@@ -149,7 +170,7 @@
               </div>
             </div>
             I agree to the defined
-            <a href="#"> terms, conditions, and policies</a>
+            <a href="https://www.termsfeed.com/public/uploads/2021/12/sample-terms-conditions-agreement-screenshot-2.jpg"> terms, conditions, and policies</a>
           </label>
         </div>
   
@@ -194,7 +215,7 @@
       margin: 0 auto;
       max-width: 570px;
       width: 100%;
-      background: white;
+      background: tan;
       padding: 40px;
     }
   
@@ -209,12 +230,12 @@
       font-weight: 600;
       font-size: 28px;
       line-height: 34px;
-      color: #07074d;
+      color: black;
     }
     .formbold-form-title p {
       font-size: 16px;
       line-height: 24px;
-      color: #536387;
+      color: black;
       margin-top: 12px;
     }
   
