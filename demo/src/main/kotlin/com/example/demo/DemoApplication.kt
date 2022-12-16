@@ -33,7 +33,7 @@ interface apwebsiteRepository: JpaRepository<emails,String>
 @RequestMapping("api")
 class PlayerDataRestController(val apwebsiteRepo: apwebsiteRepository)
 {
-	@GetMapping("Example")
+	@GetMapping("fetchall")
 	fun ExampleFunction() = apwebsiteRepo.findAll();
 
 	@GetMapping("GETALL")
